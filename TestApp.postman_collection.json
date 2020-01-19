@@ -1,0 +1,130 @@
+{
+	"info": {
+		"_postman_id": "1c60cd7e-0f41-4f85-b11e-afe0a4fcbdae",
+		"name": "TestApp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Register User",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"FullName\":\"Supun Silva\",\n\t\"Email\":\"supun@gmail.com\",\n\t\"Password\":\"supun123\"\n}"
+				},
+				"url": {
+					"raw": "https://testappbackend.000webhostapp.com/api/register.php",
+					"protocol": "https",
+					"host": [
+						"testappbackend",
+						"000webhostapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"register.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login User",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"Email\":\"supun@gmail.com\",\n\t\"Password\":\"supun123\"\n}"
+				},
+				"url": {
+					"raw": "https://testappbackend.000webhostapp.com/api/login.php",
+					"protocol": "https",
+					"host": [
+						"testappbackend",
+						"000webhostapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"login.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add New Users",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"FullName\":\"Tharindu Silva\",\n\t\"Email\":\"tharindu@gmail.com\",\n\t\"Gender\":\"Male\",\n\t\"DOB\":\"1990-10-09\"\n}"
+				},
+				"url": {
+					"raw": "https://testappbackend.000webhostapp.com/api/add-users.php",
+					"protocol": "https",
+					"host": [
+						"testappbackend",
+						"000webhostapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"add-users.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "View All Users",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://testappbackend.000webhostapp.com/api/view-users.php",
+					"protocol": "https",
+					"host": [
+						"testappbackend",
+						"000webhostapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"view-users.php"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
