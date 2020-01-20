@@ -15,6 +15,8 @@ import {SocialIcon} from 'react-native-elements';
 
 import {CommonButton} from '../Components/index';
 
+import {LoginManager} from 'react-native-fbsdk';
+
 
 //import color.js for colors
 import color from '../Config/Color';
@@ -56,6 +58,19 @@ class WelcomeBack extends Component {
         Email: null,
         Password:null
     };
+  }
+
+  async loginFacebook(){
+    try{
+      let result = await LoginManager.logInWithPermissions(['public_profile', 'email']);
+      if (result.isCancelled){
+        alert('Login is Cancelled');
+      }else{
+        alert('login Success with permission' + result.grantedPermissions.toString())
+      }
+    }catch(error){
+      alert(error);
+    }
   }
 
   onLoginPressed(){
@@ -126,6 +141,7 @@ class WelcomeBack extends Component {
             <SocialIcon
               title="Sign In With Facebook"
               button
+              onPress={this.loginFacebook}
               type="facebook"
               style={{
                 marginTop: 10,

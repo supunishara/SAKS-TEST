@@ -1,4 +1,4 @@
-apply plugin: "com.android.application"
+repositoriesapply plugin: "com.android.application"
 
 import com.android.build.OutputFile
 
@@ -179,9 +179,11 @@ android {
 }
 
 dependencies {
+    implementation project(':react-native-fbsdk')
     implementation project(':react-native-vector-icons')
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation "com.facebook.react:react-native:+"  // From node_modules
+    compile 'com.facebook.android:facebook-android-sdk:4.10.0'
 
     if (enableHermes) {
         def hermesPath = "../../node_modules/hermes-engine/android/";
